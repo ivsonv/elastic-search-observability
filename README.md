@@ -13,3 +13,8 @@ docker compose up -d
 `Dashboard` -> http://localhost:5601
 
 <img width="1717" alt="image" src="https://github.com/vmoney-bsb/vmoney-api/assets/63156114/1f71d242-602a-45e8-8a58-5823ac5c1f44">
+
+<br>
+
+`heartbeat` -> kibana -> observability -> uptime
+<img width="1715" alt="image" src="https://github.com/ivsonv/elastic-search-observability/assets/63156114/c214c8c9-d091-467e-be4c-426316a7ca5f">
