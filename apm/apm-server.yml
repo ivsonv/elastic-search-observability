@@ -1,0 +1,56 @@
+######################### APM Server Configuration #########################
+
+################################ APM Server ################################
+apm-server:
+  # Defines the host and port the server is listening on. Use "unix:/path/to.sock" to listen on a unix domain socket.
+  host: "0.0.0.0:8200"
+
+  # Maximum permitted size in bytes of a request's header accepted by the server to be processed.
+  #max_header_size: 1048576
+
+  # Maximum amount of time to wait for the next incoming request before underlying connection is closed.
+  #idle_timeout: 45s
+
+  # Maximum permitted duration for reading an entire request.
+  #read_timeout: 30s
+
+  # Maximum permitted duration for writing a response.
+  #write_timeout: 30s
+
+  #---------------------------- APM Server - RUM Real User Monitoring ----------------------------
+  rum:
+    enabled: true
+
+    #-- General RUM settings
+    allow_origins: ['*']
+
+    library_pattern: "node_modules|bower_components|~"
+    exclude_from_grouping: "^/webpack"
+
+    source_mapping:
+      enabled: true
+      elasticsearch:
+        hosts: ["localhost:9200"]
+        username: "elastic"
+        password: "changeme"
+
+      #cache:
+        expiration: 5m
+      index_pattern: "apm-*-sourcemap*"
+
+  #---------------------------- APM Server - Agent Configuration ----------------------------
+  kibana:
+    enabled: true
+    host: "kibana:5601"
+
+  app:
+    enabled: true
+    host: "app:8200"
+
+#================================ Outputs =================================
+
+# Configure the output to use when sending the data collected by apm-server.
+
+#-------------------------- Elasticsearch output --------------------------
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
