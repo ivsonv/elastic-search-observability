@@ -14,6 +14,7 @@ docker compose up -d
 
 <img width="1717" alt="image" src="https://github.com/vmoney-bsb/vmoney-api/assets/63156114/1f71d242-602a-45e8-8a58-5823ac5c1f44">
 
+<img width="1228" alt="image" src="https://github.com/ivsonv/elastic-search-observability/assets/63156114/701f4bac-2784-4e80-9fb9-64ba3efa71e8">
 <br>
 
 `heartbeat` -> kibana -> observability -> uptime
