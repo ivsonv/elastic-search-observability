@@ -19,3 +19,8 @@ docker compose up -d
 
 `heartbeat` -> kibana -> observability -> uptime
 <img width="1715" alt="image" src="https://github.com/ivsonv/elastic-search-observability/assets/63156114/c214c8c9-d091-467e-be4c-426316a7ca5f">
+
+## Traking frontend with backend
+APM -> Services -> codeprogress-rum -> Transactions -> /exemplo
+
+![image](https://github.com/ivsonv/elastic-search-observability/assets/63156114/828d84de-ad61-4a2e-ae58-2827535a3d63)
